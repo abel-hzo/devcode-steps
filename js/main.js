@@ -85,7 +85,7 @@ function loadPost(url) {
 
         html += `
         <div class="header">
-            <img src="${data.generic_image}" alt="spring-boot">
+            <img src="${baseUrl}${data.generic_image}" alt="spring-boot">
             <p>${data.generic_title}</p>
         </div>
         <div class="body">
@@ -110,7 +110,7 @@ function loadPost(url) {
                         html += `</code></pre>`;
                         break;
                     case "image":
-                        html += `<img style="max-width: ${baseUrl}${section[key].maxwidth};" src="${section[key].src}" alt="image1" ></img>`;
+                        html += `<img style="max-width: ${section[key].maxwidth};" src="${baseUrl}${section[key].src}" alt="image1" ></img>`;
                         break;
                     case "list":
                         html += `
