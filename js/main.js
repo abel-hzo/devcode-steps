@@ -3,12 +3,13 @@ const cards = document.querySelector(".cards");
 const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
-const currentDomain = "/devcode-steps";
+const currentDomain = window.location.host;
+const baseUrl = "/devcode-steps";
 
 window.onload = function() {
 
     /* LOAD CARDS */
-    fetch(currentDomain + "../data/cards.json")
+    fetch(currentDomain + baseUrl + "/data/cards.json")
     .then(response => response.json())
     .then(data => {
 
@@ -31,7 +32,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch(currentDomain + "../data/menu.json")
+    fetch(currentDomain + baseUrl + "../data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
