@@ -8,7 +8,7 @@ const currentDomain = "/devcode-steps";
 window.onload = function() {
 
     /* LOAD CARDS */
-    fetch(currentDomain + "/data/cards.json")
+    fetch(currentDomain + "../data/cards.json")
     .then(response => response.json())
     .then(data => {
 
@@ -31,7 +31,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch(currentDomain + "/data/menu.json")
+    fetch(currentDomain + "../data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
