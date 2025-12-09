@@ -3,12 +3,12 @@ const cards = document.querySelector(".cards");
 const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
-const url = new URL("/devcode-steps", "https://abel-hzo.github.io");
+const baseUrl = new URL("/devcode-steps", "https://abel-hzo.github.io");
 
 window.onload = function() {
 
     /* LOAD CARDS */
-    fetch(url + "/data/cards.json")
+    fetch(baseUrl + "/data/cards.json")
     .then(response => response.json())
     .then(data => {
 
@@ -31,7 +31,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch(url + "/data/menu.json")
+    fetch(baseUrl + "/data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
@@ -50,7 +50,7 @@ function loadMenu(url) {
 
     let firstPostPath = "";
 
-    fetch(url)
+    fetch(baseUrl + url)
     .then(response => response.json())
     .then(data => {
 
@@ -75,7 +75,7 @@ function loadMenu(url) {
 
 function loadPost(url) {
 
-    fetch(url)
+    fetch(baseUrl + url)
     .then(response => response.json())
     .then(data => {
 
@@ -146,7 +146,7 @@ function loadTextAndCode(url) {
         }
     }
 
-    xhr.open("GET", url, false);
+    xhr.open("GET", baseUrl + url, false);
     xhr.send();
 
     return content;
