@@ -3,13 +3,12 @@ const cards = document.querySelector(".cards");
 const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
-const currentDomain = window.location.host;
-const baseUrl = "devcode-steps";
+const url = new URL("/devcode-steps", "https://github.com/abel-hzo");
 
 window.onload = function() {
 
     /* LOAD CARDS */
-    fetch(baseUrl + "/data/cards.json")
+    fetch(url + "/data/cards.json")
     .then(response => response.json())
     .then(data => {
 
@@ -32,7 +31,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch(baseUrl + "/data/menu.json")
+    fetch(url + "/data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
