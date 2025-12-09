@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
-const currentDomain = window.location.hostname;
+const currentDomain = "/devcode-steps";
 
 window.onload = function() {
 
