@@ -1,0 +1,64 @@
+{
+    "generic_title": "Pasos para realizar un sistema en Spring Boot",
+    "generic_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+    "title": "Creación y Compilación",
+    "author": "Ing. Abel HZO",
+    "content": [
+        {
+            "subtitle": "📝 Ejecutar comando maven",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text1.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code1.txt"
+            },
+            "image": {
+                "maxwidth": "-1px",
+                "src": "/data/springboot/1_creacion_y_compilacion/resources/image1.png"
+            }
+        },
+        {
+            "subtitle": "📝 Tecleamos los datos de la aplicación",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code2.txt"
+            }
+        },
+        {
+            "subtitle": "📝 Abrir proyecto con el IDE",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text2.txt",
+            "list": "/data/springboot/1_creacion_y_compilacion/resources/list1.txt"
+        },
+        {
+            "subtitle": "📝 Realizar cambios en pom.xml",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text3.txt",
+            "code": {
+                "lang": "markup",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code3.txt"
+            }
+        },
+        {
+            "subtitle": "📝 Agregamos las dependencias",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text4.txt",
+            "code": {
+                "lang": "markup",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code4.txt"
+            }
+        },
+        {
+            "subtitle": "📝 Crear clase de arranque main",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text5.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code5.txt"
+            }
+        },
+        {
+            "subtitle": "📝 Compilar y ejecutar",
+            "text": "/data/springboot/1_creacion_y_compilacion/resources/text6.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code6.txt"
+            }
+        }
+    ]
+}

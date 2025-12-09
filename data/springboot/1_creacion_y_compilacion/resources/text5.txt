@@ -1,0 +1,5 @@
+Para poder ejecutar nuestra aplicación, necesitamos crear una clase principal 
+llamada <b>App.java</b> el cual crearemos en el paquete <b>com.abelhzo.aplicacion.app</b>
+anotada con <i>@SpringBootApplication</i> y que contenga el método main.
+
+<br><br><b>Ctrl + Space</b> sobre clases señaladas con rojo para importar los paquetes necesarios.

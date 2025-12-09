@@ -1,0 +1,1 @@
+curl -X PUT -H "Accept-Encoding: *" -F "idProduct=9" -F "name=Guitarra Acustica" -F "price=1500.00" -F "categoryDTO.idCategory=9500" -F "categoryDTO.category=Artes" -F "categoryDTO.department=Musical" -v http://localhost:8080/products/modify

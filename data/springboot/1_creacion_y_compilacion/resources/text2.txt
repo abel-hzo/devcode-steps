@@ -1,0 +1,1 @@
+Posteriormente, abrimos el proyecto con nuestro IDE (Eclipse) para realizar las últimas configuraciones.

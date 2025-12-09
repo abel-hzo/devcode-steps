@@ -1,0 +1,12 @@
+@PostMapping("/save/data")
+public ResponseEntity&lt;String&gt; saveProductData(ProductDTO productDTO) {
+	mapProducts.put(productDTO.getIdProduct(), productDTO);
+	HttpHeaders headers = new HttpHeaders();
+	headers.add("Custom-Header", "foo");
+	// return new ResponseEntity&lt;String&gt;("El producto se guardo exitosamente.", headers, HttpStatus.OK);
+	return ResponseEntity
+			.status(HttpStatus.OK)
+			.headers(headers)
+			.body("El producto se guardo exitosamente.");
+			
+}

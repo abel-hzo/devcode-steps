@@ -1,0 +1,7 @@
+@DeleteMapping("/delete/{id}")
+public ResponseEntity<ProductDTO> deleteProduct(@PathVariable("id") Long id) {
+	ProductDTO remove = mapProducts.remove(id);
+	return ResponseEntity.ok()
+			.header("Custom-Header", "mi_own_header")
+			.body(remove);
+}

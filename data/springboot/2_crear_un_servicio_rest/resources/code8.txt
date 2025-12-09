@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -H "Accept-Encoding: *" -d '{"idProduct": 8, "name": "Guitarra Ibanez", "price": 7000.00, "categoryDTO": {"idCategory": 8000, "category": "Instrumentos", "department": "Musica"}}' -v http://localhost:8080/products/save/json

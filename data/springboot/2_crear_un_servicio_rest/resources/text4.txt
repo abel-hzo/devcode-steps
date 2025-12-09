@@ -1,0 +1,3 @@
+Crearemos un objeto o POJO para poder transportar los datos a través del servicio REST.
+Primero vamos a crear un paquete <b>com.abelhzo.aplicacion.dto</b>.
+<br><br>Creamos una clase <b>CategoryDTO.java</b>, la cual contendrá todas las categorías de los productos.

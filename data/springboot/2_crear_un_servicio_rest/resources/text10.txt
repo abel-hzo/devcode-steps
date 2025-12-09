@@ -1,0 +1,3 @@
+Si no se coloca la anotación <i>@RequestBody</i> en el parámetro, entonces el objeto se rellena de la forma form-data, la cual es el formato clave-valor.
+<br><br>
+También podemos observar que el método no nos regresa un <i>String</i> como lo veníamos manejando; Spring Boot cuenta con una clase para personalizar las respuestas de los servicios REST mediante <i>ResponseEntity</i>, al cual podemos agregar cabeceras, especificar el status y devolver información.

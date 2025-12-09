@@ -1,0 +1,14 @@
+&lt;!-- La colocamos justo despues del tag modelVersion --&gt;
+&lt;parent&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+	&lt;version&gt;3.5.8&lt;/version&gt;
+&lt;/parent&gt;
+
+&lt;!--Después del tag properties colocamos las dependencias--&gt;
+&lt;dependencies&gt;
+	&lt;dependency&gt;
+	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;

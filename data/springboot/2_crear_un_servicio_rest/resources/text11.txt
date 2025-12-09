@@ -1,0 +1,1 @@
+Entonces, el llamado con el comando CURL lo cambiamos a la forma clave-valor; es importante tomar en cuenta este detalle, ya que definirá la manera en cómo lo llame el frontend.

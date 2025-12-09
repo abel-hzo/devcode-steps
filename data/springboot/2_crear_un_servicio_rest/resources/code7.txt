@@ -1,0 +1,5 @@
+@PostMapping("/save/json")
+public String saveProductJson(@RequestBody ProductDTO productDTO) {
+	mapProducts.put(productDTO.getIdProduct(), productDTO);
+	return "El producto se guardo exitosamente.";
+}

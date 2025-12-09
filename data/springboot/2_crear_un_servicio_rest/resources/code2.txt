@@ -1,0 +1,10 @@
+@RestController
+@RequestMapping("/products")
+public class ProductController {
+	
+	@GetMapping("/getall")
+	public String getAllProducts() {
+		return "Retornara una lista de productos.";
+	}
+
+}

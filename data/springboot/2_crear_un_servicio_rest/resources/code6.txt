@@ -1,0 +1,40 @@
+@RestController
+@RequestMapping("/products")
+public class ProductController {
+
+	private Map&lt;Long, ProductDTO&gt; mapProducts = new HashMap&lt;Long, ProductDTO&gt;();
+
+	private ProductController() {
+		
+		CategoryDTO c1 = new CategoryDTO(1000L, "Celulares", "Electronicos");
+		CategoryDTO c2 = new CategoryDTO(2000L, "Playeras", "Ropa");
+		CategoryDTO c3 = new CategoryDTO(3000L, "Jabones", "Limpieza");
+		CategoryDTO c4 = new CategoryDTO(4000L, "Computadoras", "Electronicos");
+		CategoryDTO c5 = new CategoryDTO(5000L, "Perfumes", "Moda");
+		CategoryDTO c6 = new CategoryDTO(6000L, "Mesas", "Muebles");
+		CategoryDTO c7 = new CategoryDTO(7000L, "Sillas", "Muebles");
+		
+		ProductDTO p1 = new ProductDTO(1L, "Samsung Galaxy", 11000.00f, c1);
+		ProductDTO p2 = new ProductDTO(2L, "Playera Lion", 70.50f, c2);
+		ProductDTO p3 = new ProductDTO(3L, "Silla de Oficina", 2000.00f, c7);
+		ProductDTO p4 = new ProductDTO(4L, "Lap Top Lenovo", 8000.00f, c4);
+		ProductDTO p5 = new ProductDTO(5L, "Aquarious", 500.00f, c5);
+		ProductDTO p6 = new ProductDTO(6L, "Zote", 20.50f, c3);
+		ProductDTO p7 = new ProductDTO(7L, "Escritorio", 1499.00f, c6);
+		
+		mapProducts.put(p1.getIdProduct(), p1);
+		mapProducts.put(p2.getIdProduct(), p2);
+		mapProducts.put(p3.getIdProduct(), p3);
+		mapProducts.put(p4.getIdProduct(), p4);
+		mapProducts.put(p5.getIdProduct(), p5);
+		mapProducts.put(p6.getIdProduct(), p6);
+		mapProducts.put(p7.getIdProduct(), p7);
+		
+	}
+
+	@GetMapping("/getall")
+	public List&lt;ProductDTO&gt; getAllProducts() {
+		return mapProducts.values().stream().collect(Collectors.toList());
+	}
+
+}

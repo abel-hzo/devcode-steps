@@ -1,0 +1,1 @@
+curl -X POST -H "Accept-Encoding: *" -F "idProduct=9" -F "name=Bajo Electrico" -F "price=4500.00" -F "categoryDTO.idCategory=9000" -F "categoryDTO.category=Instruments" -F "categoryDTO.department=Music" -v http://localhost:8080/products/save/data

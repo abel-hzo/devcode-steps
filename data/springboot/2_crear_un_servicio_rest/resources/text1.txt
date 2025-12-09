@@ -1,0 +1,3 @@
+En el tutorial anterior ya habíamos agregado las dependencias para ejecutar Spring Boot.
+Como podemos observar, el archivo <b>pom.xml</b> nos ha quedado de la siguiente manera.
+Con eso es más que suficiente para poder crear un servicio REST con Spring Boot.

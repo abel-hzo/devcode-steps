@@ -1,0 +1,6 @@
+'groupId': com.abelhzo.aplicacion
+'artifactId': mi-aplicacion
+'version': 1.0.0
+'package': com.abelhzo.aplicacion.app
+
+Y: : Y

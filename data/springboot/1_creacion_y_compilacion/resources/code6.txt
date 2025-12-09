@@ -1,0 +1,3 @@
+cd mi-aplicacion
+mvn clean install
+mvn spring-boot:run

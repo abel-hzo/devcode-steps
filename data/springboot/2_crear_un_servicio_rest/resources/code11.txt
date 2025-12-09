@@ -1,0 +1,20 @@
+@PutMapping("/modify")
+public ResponseEntity&lt;ProductDTO&gt; modifyProduct(ProductDTO productDTO) {
+	
+	ProductDTO productdto = mapProducts.get(productDTO.getIdProduct());
+	CategoryDTO categorydto = productdto.getCategoryDTO();
+	
+	categorydto.setIdCategory(productDTO.getCategoryDTO().getIdCategory());
+	categorydto.setCategory(productDTO.getCategoryDTO().getCategory());
+	categorydto.setDepartment(productDTO.getCategoryDTO().getDepartment());
+	
+	productdto.setName(productDTO.getName());
+	productdto.setPrice(productDTO.getPrice());
+	productdto.setCategoryDTO(categorydto);
+	
+	mapProducts.put(productDTO.getIdProduct(), productdto);
+	
+	HttpHeaders headers = new HttpHeaders();
+	headers.add("Custom-Header", "my_own_header");
+	return new ResponseEntity&lt;ProductDTO&gt;(productdto, headers, HttpStatus.OK);
+}

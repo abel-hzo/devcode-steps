@@ -1,0 +1,18 @@
+public class ProductDTO {
+
+	private Long idProduct;
+	private String name;
+	private float price;
+	private CategoryDTO categoryDTO;
+
+	public ProductDTO(Long idProduct, String name, float price, CategoryDTO categoryDTO) {
+		super();
+		this.idProduct = idProduct;
+		this.name = name;
+		this.price = price;
+		this.categoryDTO = categoryDTO;
+	}	
+
+    // Getters and Setters
+
+}

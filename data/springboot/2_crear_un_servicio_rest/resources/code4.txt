@@ -1,0 +1,16 @@
+public class CategoryDTO {
+
+	private Long idCategory;
+	private String category;
+	private String department;
+
+	public CategoryDTO(Long idCategory, String category, String department) {
+		super();
+		this.idCategory = idCategory;
+		this.category = category;
+		this.department = department;
+	}
+
+    // Getters and Setters
+
+}

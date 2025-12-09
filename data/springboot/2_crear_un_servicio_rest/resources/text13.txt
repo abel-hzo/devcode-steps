@@ -1,0 +1,1 @@
+Ejecutaremos nuestro CURL, pero ahora con la variación de que especificamos el método PUT en el comando.

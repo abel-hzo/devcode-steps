@@ -1,0 +1,7 @@
+@GetMapping("/get")
+public ResponseEntity<ProductDTO> getProduct(Long id) {
+	ProductDTO productDTO = mapProducts.get(id);
+	return ResponseEntity
+			.status(HttpStatus.OK)
+			.body(productDTO);
+}

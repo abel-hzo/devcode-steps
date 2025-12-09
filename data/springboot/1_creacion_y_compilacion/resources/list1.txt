@@ -1,0 +1,3 @@
+<li>File > Open Projects From File System</li>
+<li>Directory, y seleccionamos la carpeta mi-aplicacion que nos creo.</li>
+<li>Finish</li>

@@ -1,0 +1,139 @@
+{
+    "generic_title": "Pasos para realizar un sistema en Spring Boot",
+    "generic_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+    "title": "Crear un servicio REST",
+    "author": "Ing. Abel HZO",
+    "content": [
+        {
+            "subtitle": "📝 Agregar dependencias",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text1.txt",
+            "code": {
+                "lang": "markup",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code1.txt"
+            }
+        },
+        {
+            "subtitle": "📝 Crear un servicio REST",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text2.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code2.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text3.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code3.txt"
+            },
+            "image": {
+                "maxwidth": "500px",
+                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image1.png"
+            }
+        },
+        {
+            "subtitle": "📝 Creando objetos POJO para servicio REST",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text4.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code4.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text5.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code5.txt"
+            }
+        },
+        {
+            "subtitle":"📝 Llenado de objetos y guardarlos en un Map",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text6.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code6.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text7.txt",
+            "image": {
+                "maxwidth": "370px",
+                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image2.png"
+            }
+        },
+        {
+            "subtitle": "📝 Guardado de informacion (POST)",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text8.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code7.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text9.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code8.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text10.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code9.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text11.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code10.txt"
+            }
+        },
+        {
+            "subtitle":"📝 Modificando la información (PUT)",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text12.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code11.txt"
+            }
+        },
+        {
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text13.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code12.txt"
+            }
+        },
+        {
+            "subtitle":"📝 Obtener un producto",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text14.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code13.txt"
+            }
+        },
+        {
+            "text":"/data/springboot/2_crear_un_servicio_rest/resources/text15.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code14.txt"
+            }
+        },
+        {
+            "subtitle":"📝 Eliminar un producto",
+            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text16.txt",
+            "code": {
+                "lang": "java",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code15.txt"
+            }
+        },
+        {
+            "text":"/data/springboot/2_crear_un_servicio_rest/resources/text17.txt",
+            "code": {
+                "lang": "bash",
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code16.txt"
+            }
+        }
+    ]
+}

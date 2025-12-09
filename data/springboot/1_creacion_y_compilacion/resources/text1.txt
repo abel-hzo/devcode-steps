@@ -1,0 +1,1 @@
+Abrimos la terminal, nos posicionamos en la carpeta que contendrá nuestro proyecto y escribiremos.

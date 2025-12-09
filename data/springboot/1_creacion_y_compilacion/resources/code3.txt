@@ -1,0 +1,9 @@
+&lt;description&gt;Esta es una aplicación de prueba&lt;/description&gt;
+
+&lt;-- Removemos la versión del plugin  --&gt;
+❌️ &lt;version&gt;3.6.0&lt;/version&gt;
+
+&lt;configuration&gt;
+    &lt;source&gt;17&lt;/source&gt;
+    &lt;target&gt;17&lt;/target&gt;
+&lt;/configuration&gt;
