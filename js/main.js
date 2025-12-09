@@ -17,7 +17,7 @@ window.onload = function() {
         data.forEach(element => {
         html += `
             <div class="card" onclick="loadMenu('${element.url}');">
-                <img src="${element.image}" alt="spring-boot">
+                <img src="${baseUrl}${element.image}" alt="spring-boot">
                 <div class="text-card">
                     <h4>${element.title}</h4>
                     <p>${element.description}</p>
@@ -110,7 +110,7 @@ function loadPost(url) {
                         html += `</code></pre>`;
                         break;
                     case "image":
-                        html += `<img style="max-width: ${section[key].maxwidth};" src="${section[key].src}" alt="image1" ></img>`;
+                        html += `<img style="max-width: ${baseUrl}${section[key].maxwidth};" src="${section[key].src}" alt="image1" ></img>`;
                         break;
                     case "list":
                         html += `

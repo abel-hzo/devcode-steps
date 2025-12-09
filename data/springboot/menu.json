@@ -1,6 +1,6 @@
 [
-    {"topic": "Creacion y Compilacion", "path": "../data/springboot/1_creacion_y_compilacion/post.json"},
-    {"topic": "Crear un servicio REST", "path": "../data/springboot/2_crear_un_servicio_rest/post.json"},
-    {"topic": "Organizacion MVC", "path": "../data/springboot/3_organizacion_mvc/post.json"},
-    {"topic": "Creacion de la BD", "path": "../data/springboot/4_creacion_de_la_bd/post.json"}
+    {"topic": "Creacion y Compilacion", "path": "/data/springboot/1_creacion_y_compilacion/post.json"},
+    {"topic": "Crear un servicio REST", "path": "/data/springboot/2_crear_un_servicio_rest/post.json"},
+    {"topic": "Organizacion MVC", "path": "/data/springboot/3_organizacion_mvc/post.json"},
+    {"topic": "Creacion de la BD", "path": "/data/springboot/4_creacion_de_la_bd/post.json"}
 ]

@@ -10,7 +10,7 @@
         "id": 1,
         "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
         "title": "ESP-32",
-        "url": "data/springboot/1_creacion_y_compilacion/post.json",
+        "url": "/data/springboot/1_creacion_y_compilacion/post.json",
         "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
     },
     {

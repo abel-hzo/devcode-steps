@@ -1,7 +1,7 @@
 [
-    {"topic": "Spring Boot", "url": "../data/springboot/menu.json"},
-    {"topic": "ESP 32", "url": "../data/esp32/menu.json"},
-    {"topic": "Flask Python", "url": "../data/flask/menu.json"},
-    {"topic": "JavaScript", "url": "../data/javascript/menu.json"},
-    {"topic": "Matplotlib", "url": "../data/springboot/menu.json"}
+    {"topic": "Spring Boot", "url": "/data/springboot/menu.json"},
+    {"topic": "ESP 32", "url": "/data/esp32/menu.json"},
+    {"topic": "Flask Python", "url": "/data/flask/menu.json"},
+    {"topic": "JavaScript", "url": "/data/javascript/menu.json"},
+    {"topic": "Matplotlib", "url": "/data/springboot/menu.json"}
 ]
