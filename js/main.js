@@ -4,7 +4,7 @@ const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
 const currentDomain = window.location.host;
-const baseUrl = "/devcode-steps";
+const baseUrl = "devcode-steps";
 
 window.onload = function() {
 
@@ -32,7 +32,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch(currentDomain + baseUrl + "../data/menu.json")
+    fetch(currentDomain + baseUrl + "/data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
