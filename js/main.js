@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 const contentMenu = document.querySelector(".content-menu");
 const contentPost = document.querySelector(".content-post");
 
-const url = new URL("/devcode-steps", "https://github.com/abel-hzo");
+const url = new URL("/devcode-steps", "https://abel-hzo.github.io");
 
 window.onload = function() {
 
