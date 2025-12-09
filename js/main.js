@@ -9,7 +9,7 @@ const baseUrl = "devcode-steps";
 window.onload = function() {
 
     /* LOAD CARDS */
-    fetch("data/cards.json")
+    fetch("/data/cards.json")
     .then(response => response.json())
     .then(data => {
 
@@ -32,7 +32,7 @@ window.onload = function() {
     });
 
     /* LOAD MENU */
-    fetch("data/menu.json")
+    fetch("/data/menu.json")
     .then(response => response.json())
     .then(data => { 
         let html = "";
