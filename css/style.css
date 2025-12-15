@@ -236,3 +236,47 @@ body {
     font-size: 16px;
     margin-bottom: 13px;
 }
+
+/*****************  PROGRESS BAR  *****************/
+
+.backmodal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #00c853;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.backmodal #myProgress {
+    width: 80%;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.backmodal > #myProgress > #myBar {
+    height: 22px;
+    width: 0%;
+    text-align: center;
+    line-height: 22px;
+    color: white;
+    font-size: 13px;
+    transition: width 0.2s linear, background-color 0.2s linear;
+}
