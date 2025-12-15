@@ -23,24 +23,6 @@ function progressColor(percent) {
     return "#43a047";                     // verde
 }
 
-// function calculateWeight(content) {
-//     let total = 0;
-
-//     content.forEach(section => {
-//         Object.values(section).forEach(value => {
-//             if (typeof value === "string") {
-//                 total += value.length;
-//             } else if (Array.isArray(value)) {
-//                 total += value.join("").length;
-//             } else if (typeof value === "object") {
-//                 total += JSON.stringify(value).length;
-//             }
-//         });
-//     });
-
-//     return total;
-// }
-
 let displayedProgress = 0;
 
 function animateProgress(target) {
@@ -162,8 +144,6 @@ async function loadPost(url) {
     const response = await fetch(baseUrl + url);
     const data = await response.json();
 
-    cards.style.display = "none";
-
     const totalWeight = JSON.stringify(data.content).length;
 
     let processedWeight = 0;
@@ -223,6 +203,8 @@ async function loadPost(url) {
     }
 
     html += "</div>";
+
+    cards.style.display = "none";
 
     contentPost.innerHTML = html;
     postCache.set(url, contentPost.innerHTML);
