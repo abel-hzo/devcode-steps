@@ -89,7 +89,7 @@ body {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: rgb(134, 134, 134);
+    background-color: #73b545;
     display: flex;
     align-items: center;
 }
@@ -101,7 +101,6 @@ body {
 .toolbar > label {
     display: inline-block;
     text-align: center;
-    /* background-color: rgb(121, 170, 170);*/
     font-family: 'mulish';
     cursor: pointer;
     font-size: 25px;
@@ -109,17 +108,32 @@ body {
 
 .material-symbols-outlined {
     display: inline-block;
-    border: 1px solid rgb(49, 49, 49);
-    color: rgb(49, 49, 49);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border-radius: 8px;
     width: 40px;
     line-height: 38px;
     margin-left: 5px;
     cursor: pointer;
+    background-color: #73b545;
 }
 
-.material-symbols-outlined:hover {
-    background-color: rgb(163, 163, 163);
+.material-symbols-outlined:active {
+    background-color: #70c732;
+}
+
+.toolbar > .owner {
+    font-family: 'mulish';
+    padding-left: 20px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 18px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.toolbar > .owner > span {
+    font-style: normal;
 }
 
 .toolbar > #open-menu:checked ~ .menu {
@@ -132,23 +146,25 @@ body {
     position: absolute;
     z-index: 100;
     top: 50px;
-    left: -360px;
+    left: -300px;
     width: 90%;
     height: 100vh;
     border-top: 1px solid rgb(212, 212, 212);
-    max-width: 360px;
-    background-color: rgba(134, 134, 134, 0.904);
+    max-width: 300px;
+    background-color: #74b545e6;
     transition: .5s ease-in;
 }
 
 .menu > .content-menu > li {
     padding: 10px;
-    border-bottom: 1px solid rgb(182, 182, 182);
+    border-bottom: 1px solid rgb(255, 255, 255);
     cursor: pointer;
     font-family: 'mulish';
+    color: white;
+    font-weight: 600;
 }
 
-.menu > .content-menu > li:hover {
+.menu > .content-menu > li:active {
     background-color: beige;
 }
 
