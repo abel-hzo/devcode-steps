@@ -1,6 +1,6 @@
 {
     "header_title": "Pasos para realizar un sistema en Spring Boot",
-    "header_image": "./data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+    "header_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
     "title": "Creación y Compilación",
     "author": "Ing. Abel HZO",
     "content": [
@@ -8,18 +8,18 @@
             "subtitle": "📝 Ejecutar comando maven",
             "text": "Abrimos la terminal, nos posicionamos en la carpeta que contendrá nuestro proyecto y escribiremos.",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code1.bash.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code1.bash.txt",
                 "lang": "bash"
             },
             "image": {
-                "src": "./data/springboot/1_creacion_y_compilacion/resources/image1.png",
+                "src": "/data/springboot/1_creacion_y_compilacion/resources/image1.png",
                 "maxwidth": "-1px"
             }
         },
         {
             "subtitle": "📝 Tecleamos los datos de la aplicación",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code2.bash.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code2.bash.txt",
                 "lang": "bash"
             }
         },
@@ -31,7 +31,7 @@
             "subtitle": "📝 Realizar cambios en pom.xml",
             "text": "Abrimos nuestro archivo <b>pom.xml</b> y hacemos los siguientes cambios.<br><br>En la sección &lt;configuration&gt; del plugin vamos a colocar que usamos Java 17:",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code3.markup.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code3.markup.txt",
                 "lang": "markup"
             }
         },
@@ -39,7 +39,7 @@
             "subtitle": "📝 Agregamos las dependencias",
             "text": "Agregamos las dependencias para poder ejecutar Spring Boot en nuestro <b>pom.xml.</b>",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code4.markup.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code4.markup.txt",
                 "lang": "markup"
             }
         },
@@ -47,7 +47,7 @@
             "subtitle": "📝 Crear clase de arranque main",
             "text": "Para poder ejecutar nuestra aplicación, necesitamos crear una clase principal llamada <b>App.java</b> el cual crearemos en el paquete <b>com.abelhzo.aplicacion.app</b> anotada con <i>@SpringBootApplication</i> y que contenga el método main.<br><br><b>Ctrl + Space</b> sobre clases señaladas con rojo para importar los paquetes necesarios.",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code5.java.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code5.java.txt",
                 "lang": "java"
             }
         },
@@ -55,7 +55,7 @@
             "subtitle": "📝 Compilar y ejecutar",
             "text": "Y con eso es suficiente para poder compilar y ejecutar nuestra aplicación de la siguiente manera desde la terminal.",
             "code": {
-                "path": "./data/springboot/1_creacion_y_compilacion/resources/code6.bash.txt",
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code6.bash.txt",
                 "lang": "bash"
             }
         }
