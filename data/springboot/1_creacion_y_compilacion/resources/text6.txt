@@ -1,1 +1,0 @@
-Y con eso es suficiente para poder compilar y ejecutar nuestra aplicación de la siguiente manera desde la terminal.

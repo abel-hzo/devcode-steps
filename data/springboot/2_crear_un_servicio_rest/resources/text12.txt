@@ -1,2 +1,0 @@
-Para modificar la información, podemos utilizar la anotación <i>@PutMapping</i>, la cual nos indica que la petición se hará con el método PUT, que por convención señala la modificación de la información.
-En esta ocasión no retornaremos un String, sino el objeto modificado.

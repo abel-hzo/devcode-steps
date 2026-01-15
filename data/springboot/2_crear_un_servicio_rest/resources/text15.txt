@@ -1,1 +1,0 @@
-La forma de obtenerlo será con el comando CURL, al cual solo pasaremos un solo parámetro, el cual es el id del producto.

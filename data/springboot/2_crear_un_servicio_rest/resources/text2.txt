@@ -1,3 +1,0 @@
-Creamos un paquete llamado <b>com.abelhzo.aplicacion.controllers</b> donde crearemos nuestros servicios REST.
-El servicio REST que vamos a crear será en un archivo llamado <b>ProductController.java</b>, el cual contendrá las operaciones CRUD.
-Para que nuestra clase funcione como servicio REST, tendremos que anotarla con <i>@RestController</i>, el cual Spring lo encontrará a través del <i>@ComponentScan</i>.

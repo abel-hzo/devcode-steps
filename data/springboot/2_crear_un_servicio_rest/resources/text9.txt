@@ -1,1 +1,0 @@
-Podremos hacer la prueba utilizando el comando CURL, aunque también cabe mencionar que la anotación <i>@RequestBody</i> que se colocó en el parámetro nos indica que tenemos que pasar un objeto JSON que coincida con los nombres de los campos de los objetos.

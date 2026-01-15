@@ -1,1 +1,0 @@
-Por último, hacemos la prueba para la eliminación de un producto; como hemos usado la anotación <i>@PathVariable</i>, a la URL del comando CURL se anexará la id en el segmento del path.

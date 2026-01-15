@@ -1,3 +1,0 @@
-Abrimos nuestro archivo pom.xml y hacemos los siguientes cambios.
-<br>
-En la sección &lt;configuration&gt; del plugin vamos a colocar que usamos Java 17:

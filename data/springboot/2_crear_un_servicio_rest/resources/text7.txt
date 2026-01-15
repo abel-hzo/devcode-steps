@@ -1,2 +1,0 @@
-También podemos observar que en el método <i>getAllProducts()</i> tenemos la anotación <i>@GetMapping("/lista")</i>, la cual nos indica la URL para invocar ese método. De tal forma que con la anotación <i>@RequestMapping("/productos")</i> damos un primer segmento a la URL, por lo cual la URL final sería:
-<br><b>http://localhost:8080/products/getall</b>

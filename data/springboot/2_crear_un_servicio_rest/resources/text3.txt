@@ -1,1 +1,0 @@
-Aquí se muestra cómo se utiliza la anotación <i>@ComponentScan(basePackages = {"com.abelhzo.aplicacion"})</i>, la cual tiene como función escanear los paquetes y encontrar las clases anotadas, ya sea con <i>@RestController, @Service, @Component, @Configuration, @Repository</i>, etc. Y cargarlas al contexto de Spring.

@@ -10,37 +10,6 @@
         "id": 1,
         "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
         "title": "ESP-32",
-        "url": "/data/springboot/1_creacion_y_compilacion/post.json",
         "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    },
-    {
-        "id": 2,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
-        "title": "Miniconda",
-        "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    },
-    {
-        "id": 3,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
-        "title": "Python",
-        "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    },
-    {
-        "id": 4,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
-        "title": "Kotlin",
-        "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    },
-    {
-        "id": 5,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
-        "title": "Android",
-        "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    },
-    {
-        "id": 6,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
-        "title": "Linux Bash",
-        "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
-    }    
+    }
 ]

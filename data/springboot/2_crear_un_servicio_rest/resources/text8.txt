@@ -1,1 +1,0 @@
-El siguiente paso es guardar información en nuestro mapa, la cual simula una base de datos. Para esta operación se utiliza el método POST, el cual se indicará con la anotación <i>@PostMapping("/save/json")</i>.

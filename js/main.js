@@ -8,10 +8,10 @@ const myBar = document.getElementById("myBar");
 const host = window.location.hostname;
 let baseUrl;
 
-//if(host == "127.0.0.1") 
-//    baseUrl = new URL("", "http://127.0.0.1:5500");
-//else
-baseUrl = new URL("/devcode-steps", "https://abel-hzo.github.io");
+if(host == "127.0.0.1") 
+   baseUrl = new URL("", "http://127.0.0.1:5500");
+else
+   baseUrl = new URL("/devcode-steps", "https://abel-hzo.github.io");
 
 let nosections = 0;
 let completed = 0;
@@ -60,6 +60,7 @@ window.onload = function () {
             displayedProgress = 0;
 
             let html = "";
+            let htmlMenu = "";
 
             for (const element of data) {
 
@@ -72,6 +73,8 @@ window.onload = function () {
                     </div>
                 </div>`;
 
+                htmlMenu += `<li onclick="loadMenu('${element.url}')">${element.title}</li>`;
+
                 console.log(processedWeight + " - " + totalWeight);    
                 const targetProgress = Math.round(processedWeight * 100 / totalWeight);
                 await animateProgress(targetProgress);
@@ -79,21 +82,8 @@ window.onload = function () {
             }
 
             cards.innerHTML = html;
+            contentMenu.innerHTML = htmlMenu;
             backmodal.style.display = "none";
-        });
-
-    /* LOAD MENU */
-    fetch(baseUrl + "/data/menu.json")
-        .then(response => response.json())
-        .then(data => {
-            let html = "";
-
-            data.forEach(element => {
-                html += `<li onclick="loadMenu('${element.url}')">${element.topic}</li>`;
-            });
-
-            contentMenu.innerHTML = html;
-
         });
 
 }
@@ -151,8 +141,8 @@ async function loadPost(url) {
 
     let html = `
         <div class="header">
-            <img src="${baseUrl}${data.generic_image}" alt="spring-boot">
-            <p>${data.generic_title}</p>
+            <img src="${baseUrl}${data.header_image}" alt="spring-boot">
+            <p>${data.header_title}</p>
         </div>
         <div class="body">
             <h2 class="title-post">${data.title}</h2>
@@ -170,7 +160,7 @@ async function loadPost(url) {
                     html += `<h3 class="subtitle-post">${value}</h3>`;
                     break;
                 case "text":
-                    html += `<p class="text">${loadTextAndCode(value)}</p>`;
+                    html += `<p class="text">${value}</p>`;
                     break;
                 case "code":
                     html += `<pre class="code-block line-numbers"><code class="language-${value.lang}">`;
@@ -179,13 +169,6 @@ async function loadPost(url) {
                     break;
                 case "image":
                     html += `<img style="max-width: ${value.maxwidth};" src="${baseUrl}${value.src}" alt="image1" ></img>`;
-                    break;
-                case "list":
-                    html += `
-                            <ul class="steps-list">
-                                ${loadTextAndCode(value)}
-                            </ul>
-                        `;
                     break;
             }
 

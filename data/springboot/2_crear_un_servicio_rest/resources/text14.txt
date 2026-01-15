@@ -1,1 +1,0 @@
-Ahora vamos a obtener un producto a partir de su id mediante el método GET; el parámetro lo pasaremos mediante form-data.

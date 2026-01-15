@@ -1,138 +1,138 @@
 {
-    "generic_title": "Pasos para realizar un sistema en Spring Boot",
-    "generic_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+    "header_title": "Pasos para realizar un sistema en Spring Boot",
+    "header_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
     "title": "Crear un servicio REST",
     "author": "Ing. Abel HZO",
     "content": [
         {
             "subtitle": "📝 Agregar dependencias",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text1.txt",
+            "text": "En el tutorial anterior ya habíamos agregado las dependencias para ejecutar Spring Boot. Como podemos observar, el archivo <b>pom.xml</b> nos ha quedado de la siguiente manera.<br><br>Con eso es más que suficiente para poder crear un servicio REST con Spring Boot.",
             "code": {
-                "lang": "markup",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code1.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code1.markup.txt",
+                "lang": "markup"
             }
         },
         {
             "subtitle": "📝 Crear un servicio REST",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text2.txt",
+            "text": "Creamos un paquete llamado <b>com.abelhzo.aplicacion.controllers</b> donde crearemos nuestros servicios REST. El servicio REST que vamos a crear será en un archivo llamado <b>ProductController.java</b>, el cual contendrá las operaciones CRUD.<br><br>Para que nuestra clase funcione como servicio REST, tendremos que anotarla con <i>@RestController</i>, el cual Spring lo encontrará a través del <i>@ComponentScan</i>.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code2.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code2.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text3.txt",
+            "text": "Aquí se muestra cómo se utiliza la anotación <i>@ComponentScan(basePackages = {\"com.abelhzo.aplicacion\"})</i>, la cual tiene como función escanear los paquetes y encontrar las clases anotadas, ya sea con <i>@RestController, @Service, @Component, @Configuration, @Repository</i>, etc. Y cargarlas al contexto de Spring.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code3.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code3.java.txt",
+                "lang": "java"
             },
             "image": {
-                "maxwidth": "500px",
-                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image1.png"
+                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image1.png",
+                "maxwidth": "500px"
             }
         },
         {
             "subtitle": "📝 Creando objetos POJO para servicio REST",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text4.txt",
+            "text": "Crearemos un objeto o POJO para poder transportar los datos a través del servicio REST.<br><br>Primero vamos a crear un paquete <b>com.abelhzo.aplicacion.dto</b>.<br><br>Despúes creamos una clase <b>CategoryDTO.java</b>, la cual contendrá todas las categorías de los productos.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code4.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code4.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text5.txt",
+            "text": "Y también una clase <b>ProductDTO.java</b> que contendrá la información de producto.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code5.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code5.java.txt",
+                "lang": "java"
             }
         },
         {
-            "subtitle":"📝 Llenado de objetos y guardarlos en un Map",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text6.txt",
+            "subtitle": "📝 Llenado de objetos y guardarlos en un Map",
+            "text": "Ahora llenaremos un mapa dentro del constructor del servicio REST, con los objetos DTO que creamos anteriormente.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code6.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code6.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text7.txt",
+            "text": "También podemos observar que en el método <i>getAllProducts()</i> tenemos la anotación <i>@GetMapping(\"/lista\")</i>, la cual nos indica la URL para invocar ese método. De tal forma que con la anotación <i>@RequestMapping(\"/productos\")</i> damos un primer segmento a la URL, por lo cual la URL final sería:<br><br><b>http://localhost:8080/products/getall</b>",
             "image": {
-                "maxwidth": "370px",
-                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image2.png"
+                "src": "/data/springboot/2_crear_un_servicio_rest/resources/image2.png",
+                "maxwidth": "370px"
             }
         },
         {
             "subtitle": "📝 Guardado de informacion (POST)",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text8.txt",
+            "text": "El siguiente paso es guardar información en nuestro mapa, la cual simula una base de datos. Para esta operación se utiliza el método POST, el cual se indicará con la anotación <i>@PostMapping(\"/save/json\")</i>.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code7.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code7.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text9.txt",
+            "text": "Podremos hacer la prueba utilizando el comando CURL, aunque también cabe mencionar que la anotación <i>@RequestBody</i> que se colocó en el parámetro nos indica que tenemos que pasar un objeto JSON que coincida con los nombres de los campos de los objetos.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code8.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code8.bash.txt",
+                "lang": "bash"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text10.txt",
+            "text": "Si no se coloca la anotación <i>@RequestBody</i> en el parámetro, entonces el objeto se rellena de la forma form-data, la cual es el formato clave-valor.<br><br>También podemos observar que el método no nos regresa un <i>String</i> como lo veníamos manejando; Spring Boot cuenta con una clase para personalizar las respuestas de los servicios REST mediante <i>ResponseEntity</i>, al cual podemos agregar cabeceras, especificar el status y devolver información.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code9.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code9.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text11.txt",
+            "text": "Entonces, el llamado con el comando CURL lo cambiamos a la forma clave-valor; es importante tomar en cuenta este detalle, ya que definirá la manera en cómo lo llame el frontend.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code10.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code10.bash.txt",
+                "lang": "bash"
             }
         },
         {
-            "subtitle":"📝 Modificando la información (PUT)",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text12.txt",
+            "subtitle": "📝 Modificando la información (PUT)",
+            "text": "Para modificar la información, podemos utilizar la anotación <i>@PutMapping</i>, la cual nos indica que la petición se hará con el método PUT, que por convención señala la modificación de la información.<br><br>En esta ocasión no retornaremos un String, sino el objeto modificado.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code11.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code11.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text13.txt",
+            "text": "Ejecutaremos nuestro CURL, pero ahora con la variación de que especificamos el método PUT en el comando.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code12.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code12.bash.txt",
+                "lang": "bash"
             }
         },
         {
-            "subtitle":"📝 Obtener un producto",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text14.txt",
+            "subtitle": "📝 Obtener un producto",
+            "text": "Ahora vamos a obtener un producto a partir de su <b>id</b> mediante el método GET; el parámetro lo pasaremos mediante form-data.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code13.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code13.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text":"/data/springboot/2_crear_un_servicio_rest/resources/text15.txt",
+            "text": "La forma de obtenerlo será con el comando <b>CURL</b>, al cual solo pasaremos un solo parámetro, el cual es el id del producto.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code14.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code14.bash.txt",
+                "lang": "bash"
             }
         },
         {
-            "subtitle":"📝 Eliminar un producto",
-            "text": "/data/springboot/2_crear_un_servicio_rest/resources/text16.txt",
+            "subtitle": "📝 Eliminar un producto",
+            "text": "Por último, eliminaremos un producto. Para las eliminaciones se utiliza el método DELETE, pero en esta ocasión pasaremos el id como parte de la URL; esto es posible mediante la anotación <i>@PathVariable</i>.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code15.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code15.java.txt",
+                "lang": "java"
             }
         },
         {
-            "text":"/data/springboot/2_crear_un_servicio_rest/resources/text17.txt",
+            "text": "Por último, hacemos la prueba para la eliminación de un producto; como hemos usado la anotación <i>@PathVariable</i>, a la URL del comando CURL se anexará la id en el segmento del path.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code16.txt"
+                "path": "/data/springboot/2_crear_un_servicio_rest/resources/code16.bash.txt",
+                "lang": "bash"
             }
         }
     ]

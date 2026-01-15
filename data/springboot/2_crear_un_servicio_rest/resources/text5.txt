@@ -1,1 +1,0 @@
-Y también una clase <b>ProductDTO.java</b> que contendrá la información de producto.

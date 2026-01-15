@@ -1,1 +1,0 @@
-Por último, eliminaremos un producto. Para las eliminaciones se utiliza el método DELETE, pero en esta ocasión pasaremos el id como parte de la URL; esto es posible mediante la anotación <i>@PathVariable</i>.

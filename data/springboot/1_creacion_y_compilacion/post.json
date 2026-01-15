@@ -1,63 +1,62 @@
 {
-    "generic_title": "Pasos para realizar un sistema en Spring Boot",
-    "generic_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+    "header_title": "Pasos para realizar un sistema en Spring Boot",
+    "header_image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
     "title": "Creación y Compilación",
     "author": "Ing. Abel HZO",
     "content": [
         {
             "subtitle": "📝 Ejecutar comando maven",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text1.txt",
+            "text": "Abrimos la terminal, nos posicionamos en la carpeta que contendrá nuestro proyecto y escribiremos.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code1.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code1.bash.txt",
+                "lang": "bash"
             },
             "image": {
-                "maxwidth": "-1px",
-                "src": "/data/springboot/1_creacion_y_compilacion/resources/image1.png"
+                "src": "/data/springboot/1_creacion_y_compilacion/resources/image1.png",
+                "maxwidth": "-1px"
             }
         },
         {
             "subtitle": "📝 Tecleamos los datos de la aplicación",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code2.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code2.bash.txt",
+                "lang": "bash"
             }
         },
         {
             "subtitle": "📝 Abrir proyecto con el IDE",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text2.txt",
-            "list": "/data/springboot/1_creacion_y_compilacion/resources/list1.txt"
+            "text": "<ul class=\"steps-list\"><li>File &gt; Open Projects From File System</li><li>Directory, y seleccionamos la carpeta mi-aplicacion que nos creo.</li><li>Finish</li></ul>"
         },
         {
             "subtitle": "📝 Realizar cambios en pom.xml",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text3.txt",
+            "text": "Abrimos nuestro archivo <b>pom.xml</b> y hacemos los siguientes cambios.<br><br>En la sección &lt;configuration&gt; del plugin vamos a colocar que usamos Java 17:",
             "code": {
-                "lang": "markup",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code3.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code3.markup.txt",
+                "lang": "markup"
             }
         },
         {
             "subtitle": "📝 Agregamos las dependencias",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text4.txt",
+            "text": "Agregamos las dependencias para poder ejecutar Spring Boot en nuestro <b>pom.xml.</b>",
             "code": {
-                "lang": "markup",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code4.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code4.markup.txt",
+                "lang": "markup"
             }
         },
         {
             "subtitle": "📝 Crear clase de arranque main",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text5.txt",
+            "text": "Para poder ejecutar nuestra aplicación, necesitamos crear una clase principal llamada <b>App.java</b> el cual crearemos en el paquete <b>com.abelhzo.aplicacion.app</b> anotada con <i>@SpringBootApplication</i> y que contenga el método main.<br><br><b>Ctrl + Space</b> sobre clases señaladas con rojo para importar los paquetes necesarios.",
             "code": {
-                "lang": "java",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code5.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code5.java.txt",
+                "lang": "java"
             }
         },
         {
             "subtitle": "📝 Compilar y ejecutar",
-            "text": "/data/springboot/1_creacion_y_compilacion/resources/text6.txt",
+            "text": "Y con eso es suficiente para poder compilar y ejecutar nuestra aplicación de la siguiente manera desde la terminal.",
             "code": {
-                "lang": "bash",
-                "path": "/data/springboot/1_creacion_y_compilacion/resources/code6.txt"
+                "path": "/data/springboot/1_creacion_y_compilacion/resources/code6.bash.txt",
+                "lang": "bash"
             }
         }
     ]
