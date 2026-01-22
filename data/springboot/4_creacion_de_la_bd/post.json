@@ -1,0 +1,67 @@
+{
+    "header_title": "Pasos para realizar un sistema en Spring Boot",
+    "header_image": "/data/springboot/spring-boot.png",
+    "title": "Creación de la base de datos",
+    "author": "Ing. Abel HZO",
+    "content": [
+        {
+            "subtitle": "📝 Revisando bases de datos",
+            "text": "El primer paso que haremos será crear la base de datos bajo el usuario de root en nuestra base de datos en MySQL.<br><br>Anteriormente ya habíamos asignado el password de <b>admin</b> al momento de la instalación de la base de datos.<br><br>También podemos ver las bases de datos que se encuentran tecleando <b>SHOW DATABASES;</b>",
+            "image": {
+                "src": "/data/springboot/4_creacion_de_la_bd/resources/image1.png",
+                "maxwidth": "700px"
+            }
+        },
+        {
+            "subtitle": "📝 Crear una base de datos",
+            "text": "Ahora crearemos una base de datos para simular el registro de productos que se mostrarán en un sistema web. Habrá tres roles para los usuarios; estos serán:<br><br><b>USER:</b> El cual solo podrá consultar los productos.<br><b>ADMIN:</b> El cual podrá dar de alta un nuevo producto.<br><b>SU:</b> El cual podrá hacer operaciones CRUD en todas las tablas.",
+            "code": {
+                "path": "/data/springboot/4_creacion_de_la_bd/resources/code1.sql.txt",
+                "lang": "sql"
+            }
+        },
+        {
+            "subtitle": "📝 Creando usuario para la base de datos",
+            "text": "Una vez creada la base de datos, crearemos un usuario para que nuestra aplicación pueda trabajar con la base de datos que hemos creado con el fin de administrar los permisos.",
+            "code": {
+                "path": "/data/springboot/4_creacion_de_la_bd/resources/code2.sql.txt",
+                "lang": "sql"
+            }
+        },
+        {
+            "subtitle": "📝 Agregando permisos al usuario",
+            "text": "Agregamos los permisos con la sentencia GRANT a todas las tablas de la base de datos y solo pondremos permisos para INSERT, DELETE, SELECT y UPDATE.",
+            "code": {
+                "path": "/data/springboot/4_creacion_de_la_bd/resources/code3.sql.txt",
+                "lang": "sql"
+            }
+        },
+        {
+            "subtitle": "📝 Comprobamos el acceso con el usuario",
+            "text": "Realizamos una comprobación para ver si ya podemos acceder con el nuevo usuario que hemos creado.",
+            "image": {
+                "src": "/data/springboot/4_creacion_de_la_bd/resources/image2.png",
+                "maxwidth": "700px"
+            }
+        },
+        {
+            "subtitle": "📝 Como eliminar un usuario de mysql",
+            "text": "También hay que mencionar que, para eliminar un usuario, necesitamos ejecutar la sentencia DROP.",
+            "code": {
+                "path": "/data/springboot/4_creacion_de_la_bd/resources/code4.sql.txt",
+                "lang": "sql"
+            }
+        },
+        {
+            "subtitle": "📝 Insertando registros de prueba",
+            "text": "Ahora vamos a insertar algunos registros de prueba, para poder ver funcionar nuestro servicio REST, y también agregaremos un usuario para poder autenticarnos en nuestro sistema.<br><br>Ya teniendo el sistema, guardaremos las imágenes de los productos dentro de la tabla. En esta ocasión quise guardarlas dentro de una tabla para ver la dinámica de inserción de un campo tipo BLOB, pero muchas veces es conveniente almacenar las imágenes en un servidor y solo guardar la URL en la base de datos.",
+            "code": {
+                "path": "/data/springboot/4_creacion_de_la_bd/resources/code5.sql.txt",
+                "lang": "sql"
+            }
+        },
+        {
+            "text": "Es muy importante mencionar que se tiene que especificar el tamaño de los archivos que aceptara la base de datos en el archivo de configuración \"my.ini\" el atributo \"max_allowed_packet\" que por default viene 1M.<br><br>[mysqld]<br>max_allowed_packet = 10M<br><br>Y tambien resaltar que existen los tipos de datos:<br><br><b>TINYBLOB:</b> maximum length of 255 bytes<br><b>BLOB:</b> maximum length of 65,535 bytes<br><b>MEDIUMBLOB:</b> maximum length of 16,777,215 bytes<br><b>LONGBLOB:</b> maximum length of 4,294,967,295 bytes<br><br>En el cual nosotros utilizaremos MEDIUMBLOB para aceptar archivo de 16MB."
+        }
+    ]
+}

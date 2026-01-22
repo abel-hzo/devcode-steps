@@ -1,0 +1,1 @@
+&lt;!DOCTYPE hibernate-reverse-engineering SYSTEM "./hibernate-reverse-engineering-3.0.dtd" &gt;

@@ -1,0 +1,14 @@
+Product p = em.find(Product.class, 1L);
+
+/*
+SQL ejecutado:
+SELECT * FROM products WHERE id = 1;
+*/
+
+// Cuando accedes a la relación
+User u = p.getUser();
+
+/*
+Hibernate recién ahí ejecuta:
+SELECT * FROM users WHERE id = ?;
+*/

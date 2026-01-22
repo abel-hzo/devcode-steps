@@ -1,0 +1,100 @@
+{
+    "header_title": "Pasos para realizar un sistema en Spring Boot",
+    "header_image": "/data/springboot/spring-boot.png",
+    "title": "Creación de los JPA",
+    "author": "Ing. Abel HZO",
+    "content": [
+        {
+            "subtitle": "📝 Configuración de la librería MySQL",
+            "text": "Una vez creada la base de datos en MySQL, ahora vamos a generar las clases JPA que representan las tablas y los campos de la base de datos.<br><br>Primero vamos a añadir la dependencia que es la que contiene todas las librerías para poder trabajar con JPAs, y también agregaremos la dependencia para poder conectarnos a la base de datos:",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code1.markup.txt",
+                "lang": "markup"
+            }
+        },
+        {
+            "subtitle": "📝 Crear archivo de conexión hibernate-mysql.properties",
+            "text": "Ahora creamos el archivo que nos conectará nuestra aplicación a la base de datos; este será un archivo de configuración llamado <b>hibernate-mysql.properties</b> y se ubicará en: <b>/src/main/resources</b>.<br><br>Tenemos que agregar los datos del usuario y de la base de datos que creamos en MySQL de la lección anterior.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code2.markup.txt",
+                "lang": "markup"
+            }
+        },
+        {
+            "subtitle": "📝 Crear archivo de configuración de JPA's",
+            "text": "Lo siguiente será configurar el archivo donde vamos a definir el nombre de las clases y los tipos de los campos de los JPA's.<br><br>Este archivo se llamará: <b>hibernate-reveng-mysql.xml</b> y se ubicará en: <b>/src/main/resources</b>",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code3.markup.txt",
+                "lang": "markup"
+            }
+        },
+        {
+            "subtitle": "📝 Incluir el archivo hibernate-reverse-engineering-3.0.dtd",
+            "text": "Como podemos notar en el archivo <b>hibernate-reveng-mysql.xml</b>, hay una cabecera que hace referencia al archivo: <b>hibernate-reverse-engineering-3.0.dtd</b>; este archivo lo podemos encontrar en la siguiente URL: <a href=\"https://hibernate.org/dtd/\" target=\"_blank\">https://hibernate.org/dtd/</a>, el cual vamos a descargar y colocar en el directorio: <b>/src/main/resources</b>.<br><br>Y también colocaremos una copia a la altura del <b>pom.xml</b>.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code4.markup.txt",
+                "lang": "markup"
+            }
+        },
+        {
+            "subtitle": "📝 Agregar plugin hibernate-tools-maven",
+            "text": "Posteriormente, agregaremos el plugin de hibernate-tools-maven en el archivo pom.xml en la sección de los plugins.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code5.markup.txt",
+                "lang": "markup"
+            }
+        },
+        {
+            "subtitle": "📝 Ejecutar comando: mvn hibernate-tools:hbm2java",
+            "text": "Una vez terminada la configuración, se ejecutará el siguiente comando en la terminal para generar los JPA a partir de la base de datos existente:",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code6.bash.txt",
+                "lang": "bash"
+            }
+        },
+        {
+            "subtitle": "📝 Analizando JPA's generados",
+            "text": "Toda la configuración que anteriormente hicimos nos ha generado las clases que representan las tablas de la base de datos, en las cuales cada propiedad también representa cada uno de los campos.",
+            "image": {
+                "src": "/data/springboot/5_creacion_de_jpa/resources/image1.png",
+                "maxwidth": "400px"
+            }
+        },
+        {
+            "text": "Analicemos, por ejemplo, la entidad <b>Product.java</b>. Podemos ver que tenemos la anotación <b>@Table</b> que nos indica qué tabla representa y de qué base de datos la ha generado; luego pudimos ver que cada una de las propiedades representa cada uno de los campos de las tablas.<br><br>He colocado un comentario a cada propiedad para cuál corresponde a cada campo.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code7.java.txt",
+                "lang": "java"
+            }
+        },
+        {
+            "text": "También podemos ver cómo en los getters viene especificado a qué columna representa cada propiedad y de igual manera qué propiedades tienen relación.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code8.java.txt",
+                "lang": "java"
+            }
+        },
+        {
+            "subtitle": "📝 Fetch.LAZY y Fetch.EAGER",
+            "text": "Como podemos observar, las propiedades que tienen una relación como <b>@ManyToOne</b> o <b>@OneToMany</b> tienen una propiedad llamada fetch, la cual define la forma en la que Hibernate cargará los datos de una relación:<br><br><b>LAZY</b> → “Cárgalo solo si alguien lo usa”. (carga diferida)<br><b>EAGER</b> → “Cárgalo inmediatamente junto con la entidad”. (carga inmediata)",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code9.java.txt",
+                "lang": "java"
+            }
+        },
+        {
+            "text": "<b>FetchType.EAGER:</b> Significa que cuando cargas un Product, Hibernate también carga automáticamente la Category.<br><br>Aunque NO uses p.getCategory(), la Category ya fue cargada.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code10.java.txt",
+                "lang": "java"
+            }
+        },
+        {
+            "text": "<b>FetchType.LAZY:</b> Significa que cuando cargas un Product, NO se carga el User.",
+            "code": {
+                "path": "/data/springboot/5_creacion_de_jpa/resources/code11.java.txt",
+                "lang": "java"
+            }
+        }
+    ]
+}

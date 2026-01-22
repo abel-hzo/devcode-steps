@@ -1,14 +1,14 @@
 [
     {
         "id": 0,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+        "image": "/data/springboot/spring-boot.png",
         "title": "Spring Boot",
         "url": "/data/springboot/menu.json",
         "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
     },
     {
         "id": 1,
-        "image": "/data/springboot/1_creacion_y_compilacion/resources/spring-boot.png",
+        "image": "/data/springboot/spring-boot.png",
         "title": "ESP-32",
         "description": "Es esta sección mostraremos los pasos para contruir una aplicación en SpringBoot."
     }

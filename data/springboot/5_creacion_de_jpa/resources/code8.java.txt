@@ -1,0 +1,42 @@
+@Id
+@Column(name = "id_product", unique = true, nullable = false)
+public Long getIdProduct() {
+	return this.idProduct;
+}
+
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "saved_by")
+public User getUser() {
+	return this.user;
+}
+
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "id_category")
+public Category getCategory() {
+	return this.category;
+}
+
+@Column(name = "product", nullable = false, length = 100)
+public String getProduct() {
+	return this.product;
+}
+
+@Column(name = "price", nullable = false, precision = 22)
+public Double getPrice() {
+	return this.price;
+}
+
+@Column(name = "description", nullable = false, length = 16777215)
+public String getDescription() {
+	return this.description;
+}
+
+@Column(name = "stock", nullable = false)
+public Integer getStock() {
+	return this.stock;
+}
+
+@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "unresolved")
+public Set&lt;PhotoProduct&gt; getPhotoProducts() {
+	return this.photoProducts;
+}

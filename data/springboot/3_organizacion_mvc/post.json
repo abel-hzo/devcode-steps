@@ -1,9 +1,26 @@
 {
-    "header_title": "",
-    "header_image": "",
-    "title": "",
-    "author": "",
+    "header_title": "Pasos para realizar un sistema en Spring Boot",
+    "header_image": "/data/springboot/spring-boot.png",
+    "title": "Estructura de la aplicación",
+    "author": "ing. Abel HZO",
     "content": [
-        {}
+        {
+            "subtitle": "📝 Organización de paquetes",
+            "text": "Después de haber hecho los servicios REST, es necesario crear una estructura de paquetes que contendrán las clases Java que tendrán como función realizar una tarea en específico, como la lógica de negocio, acceso a bases de datos, entidades de base de datos, configuraciones de la aplicación y excepciones personalizadas.<br><br>En la siguiente imagen podemos ver cómo se estructuraría el proyecto:",
+            "image": {
+                "src": "/data/springboot/3_organizacion_mvc/resources/image1.png",
+                "maxwidth": "400px"
+            }
+        },
+        {
+            "text": "De acuerdo a la estructura de la imagen, deberán quedarnos los paquetes de la siguiente manera:",
+            "image": {
+                "src": "/data/springboot/3_organizacion_mvc/resources/image2.png",
+                "maxwidth": "350px"
+            }
+        },
+        {
+            "text": "Ahora solo iremos llenando los paquetes con las clases correspondientes, como en el caso de los DTOs, que ya hemos colocado algunas de las clases DTO que hicimos en el ejercicio anterior; en las siguientes lecciones crearemos las clases para los demás paquetes."
+        }
     ]
 }

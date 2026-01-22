@@ -1,0 +1,1 @@
+user@debian:~/Documents/workspace-java/mi-aplicacion$ mvn hibernate-tools:hbm2java

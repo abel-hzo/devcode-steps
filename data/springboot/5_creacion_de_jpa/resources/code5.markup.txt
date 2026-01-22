@@ -1,0 +1,28 @@
+&lt;plugins&gt;
+...
+	&lt;plugin&gt;
+		&lt;groupId&gt;org.hibernate.tool&lt;/groupId&gt;
+		&lt;artifactId&gt;hibernate-tools-maven&lt;/artifactId&gt;
+		&lt;version&gt;7.2.1.Final&lt;/version&gt;
+
+		&lt;configuration&gt;
+			&lt;propertyFile&gt;
+				${basedir}/src/main/resources/hibernate-mysql.properties&lt;/propertyFile&gt;
+			&lt;revengFile&gt;
+				${basedir}/src/main/resources/hibernate-reveng-mysql.xml&lt;/revengFile&gt;
+			&lt;outputDirectory&gt;${basedir}/src/main/java&lt;/outputDirectory&gt;
+			&lt;!-- packageName&gt;com.abelhzo.generate.jpa.mysql.entities&lt;/packageName --&gt;
+			&lt;ejb3&gt;true&lt;/ejb3&gt;
+			&lt;jdk5&gt;true&lt;/jdk5&gt;
+		&lt;/configuration&gt;
+
+		&lt;dependencies&gt;
+			&lt;dependency&gt;
+				&lt;groupId&gt;com.mysql&lt;/groupId&gt;
+				&lt;artifactId&gt;mysql-connector-j&lt;/artifactId&gt;
+				&lt;version&gt;${mysql.version}&lt;/version&gt;
+			&lt;/dependency&gt;
+		&lt;/dependencies&gt;
+	&lt;/plugin&gt;
+...	
+&lt;/plugins&gt;

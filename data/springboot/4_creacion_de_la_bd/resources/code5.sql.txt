@@ -1,0 +1,10 @@
+INSERT INTO categories(category) VALUES("Limpieza");
+INSERT INTO categories(category) VALUES("Electronicos");
+
+INSERT INTO users(usern, passw, email, photo_byte, role) VALUES('abelhz', 'qwert123', 'abel.hzo@mail.com', 1, 'SU');
+INSERT INTO users(usern, passw, email, photo_byte, role) VALUES('dmitri', 'music23', 'dmitri.shostakovich@mail.com', 1, 'ADMIN');
+INSERT INTO users(usern, passw, email, photo_byte, role) VALUES('chopin', 'piano100', 'federic.chopin@mail.com', 1, 'USER');
+
+INSERT INTO products VALUES(1, "Samsung Galaxy", 11000.00, "Telefono a la vanguardia, tecnologia Samsung Galaxy", 10, 2, 1);
+INSERT INTO products VALUES(2, "LapTop Lenovo L470", 8000.00, "LapTop Core i7 con 8 Ram y 250 GB de Disco", 4, 2, 1);
+INSERT INTO products VALUES(3, "Jabon Zote", 25.00, "Jabón Zote para lavado de Ropa y Trastes", 100, 1, 2);

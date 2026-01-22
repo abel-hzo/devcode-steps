@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS storehz;
+
+USE storehz;
+
+CREATE TABLE IF NOT EXISTS users (
+	id_user BIGINT PRIMARY KEY AUTO_INCREMENT,
+	usern VARCHAR(100) NOT NULL,
+	passw VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	photo_byte MEDIUMBLOB NOT NULL,
+	role VARCHAR(30)
+)ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS categories (
+	id_category BIGINT PRIMARY KEY AUTO_INCREMENT,
+	category VARCHAR(100) NOT NULL,
+	saved_by BIGINT,
+	CONSTRAINT fk_category_user FOREIGN KEY(saved_by) REFERENCES users(id_user)
+)ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS products (
+	id_product BIGINT PRIMARY KEY,
+	product VARCHAR(100) NOT NULL,
+	price DOUBLE NOT NULL,
+	description MEDIUMTEXT NOT NULL,
+	stock INT NOT NULL,
+	id_category BIGINT,
+	saved_by BIGINT,
+	CONSTRAINT fk_product_category FOREIGN KEY (id_category) REFERENCES categories(id_category),
+	CONSTRAINT fk_product_user FOREIGN KEY(saved_by) REFERENCES users(id_user)
+)ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS photos_products (
+	id_photo BIGINT PRIMARY KEY AUTO_INCREMENT,
+	byte_foto MEDIUMBLOB NOT NULL,
+	id_product BIGINT NOT NULL,
+	CONSTRAINT fk_photo_product FOREIGN KEY (id_product) REFERENCES products(id_product)
+)ENGINE = InnoDB;

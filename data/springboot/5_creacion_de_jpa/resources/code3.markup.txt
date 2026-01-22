@@ -1,0 +1,67 @@
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE hibernate-reverse-engineering 
+	SYSTEM "./hibernate-reverse-engineering-3.0.dtd" &gt;
+
+&lt;hibernate-reverse-engineering&gt;
+
+&lt;!-- En esta sección definimos los tipos de datos que se asignarán a las propiedades  --&gt;
+&lt;!-- de la JPA; por ejemplo, todos los campos que sean BIGINT en la base de datos,  --&gt;
+&lt;!-- las propiedades serán de tipo java.lang.Long. --&gt;
+	&lt;type-mapping&gt;
+		&lt;sql-type jdbc-type="INTEGER" hibernate-type="java.lang.Integer" /&gt;
+		&lt;sql-type jdbc-type="DOUBLE" hibernate-type="java.lang.Double" /&gt;
+		&lt;sql-type jdbc-type="BIGINT" hibernate-type="java.lang.Long" /&gt;
+		&lt;sql-type jdbc-type="BLOB" hibernate-type="byte[]" /&gt;
+	&lt;/type-mapping&gt;
+
+&lt;!-- Para la generación de la entity User.java, vamos a excluir las foreign-key  --&gt;
+&lt;!-- que se encuentran en las tablas categories y products para evitar crear los  --&gt;
+&lt;!-- HashSet de categories y products en la entity User.java --&gt;
+	&lt;table name="users" 
+		   catalog="storehz"
+		   class="com.abelhzo.aplicacion.entities.User"&gt;
+		&lt;foreign-key constraint-name="fk_category_user"&gt;
+			&lt;set exclude="true" /&gt;
+		&lt;/foreign-key&gt;
+		&lt;foreign-key constraint-name="fk_product_user"&gt;
+			&lt;set exclude="true"/&gt;
+		&lt;/foreign-key&gt;
+	&lt;/table&gt;
+
+&lt;!-- Para la generación de la entity Category.java, vamos a excluir la foreign-key  --&gt;
+&lt;!-- que se encuentra en la misma tabla categories para evitar crear la propiedad  --&gt;
+&lt;!-- de tipo user; en este caso nos elimina la relación many-to-one y lo deja como  --&gt;
+&lt;!-- una propiedad de tipo Long, la cual posteriormente podemos eliminar con la  --&gt;
+&lt;!-- etiqueta column y la propiedad exclude. Es importante mencionar que en la  --&gt;
+&lt;!-- propiedad name debe estar el nombre del campo exacto de cómo está en la base de datos. --&gt;
+	&lt;table name="categories" 
+		   catalog="storehz"
+		   class="com.abelhzo.aplicacion.entities.Category"&gt;
+		&lt;column name="saved_by" exclude="true"/&gt;
+		&lt;foreign-key constraint-name="fk_category_user"&gt;
+			&lt;many-to-one exclude="true" /&gt;
+		&lt;/foreign-key&gt;
+	&lt;/table&gt;
+	
+&lt;!-- En la generación de la entidad Product.java, definimos la propagación de las  --&gt;
+&lt;!-- operaciones en su relación @OneToMany o a su HashSet mediante cascade. --&gt;
+	&lt;table name="products" 
+	       catalog="storehz"
+		   class="com.abelhzo.aplicacion.entities.Product"&gt;
+		   &lt;foreign-key constraint-name="fk_photo_product"&gt;
+		   		&lt;set cascade="ALL"/&gt;
+		   &lt;/foreign-key&gt;
+	&lt;/table&gt;
+
+&lt;!-- Para la generación de la entity PhotoProduct.java, aplicamos el mismo principio que  --&gt;
+&lt;!-- usamos para crear la entity Category.java. --&gt;
+	&lt;table name="photos_products" 
+		   catalog="storehz"
+		   class="com.abelhzo.aplicacion.entities.PhotoProduct"&gt;
+		&lt;column name="id_product" exclude="true"&gt;&lt;/column&gt;
+		&lt;foreign-key constraint-name="fk_photo_product"&gt;
+			&lt;many-to-one exclude="true" /&gt;
+		&lt;/foreign-key&gt;
+	&lt;/table&gt;
+
+&lt;/hibernate-reverse-engineering&gt;

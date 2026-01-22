@@ -1,0 +1,4 @@
+hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver
+hibernate.connection.url=jdbc:mysql://127.0.0.1:3306/storehz
+hibernate.connection.username=abelhzo
+hibernate.connection.password=store12345

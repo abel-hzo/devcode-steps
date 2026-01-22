@@ -1,0 +1,10 @@
+Product p = em.find(Product.class, 1L);
+
+// Hibernate ejecuta algo como:
+
+/*
+SELECT p.*, c.*
+FROM products p
+LEFT JOIN categories c ON p.id_category = c.id_category
+WHERE p.id = 1;
+*/

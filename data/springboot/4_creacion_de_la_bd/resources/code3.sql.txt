@@ -1,0 +1,2 @@
+GRANT INSERT, DELETE, SELECT, UPDATE ON storehz.* TO 'abelhzo'@'localhost';
+FLUSH PRIVILEGES;
